@@ -1,0 +1,37 @@
+// Custom Code
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+$spacer: 20px;
+$nav-pills-link-active-color: #25303B;
+$nav-pills-link-active-bg: #fff;
+$nav-link-color: #1264BA;
+
+.card{
+    max-width: 600px;
+}
+
+
+// Import functions and variables
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+// Custom Colors
+$custom-theme-colors: (
+  "white": #fff,
+  "whitegray": #E8F2FD,
+  "gray": #C8D3DF,
+  "link": #1264BA,
+  "darker": #25303B,
+  "darkest": #141A1F
+);
+$custom-spacers: (
+  23: $spacer * .75,
+  34: $spacer * 1.25
+);
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+$spacers: map-merge($custom-spacers, $spacers);
+
+// Import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
